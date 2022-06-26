@@ -1,0 +1,16 @@
+.redst {
+    color: red;
+    font-weight: bold;
+}
+.red {
+    color: red;
+}
+.bolds {
+    font-weight: bold;
+}
+.italics {
+    font-style: italic;
+}
+.unders {
+    text-decoration: underline;
+}
