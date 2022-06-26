@@ -143,8 +143,8 @@ export default function Home() {
   }
 
   const copyCSS = () => {
-    // style.cssをこのサイト自体で改行なしに → Tab空白を\tに手動で直す
-    var copy_text = '.redst {<br>\tcolor: red;<br>\tfont-weight: bold;<br>}<br>.red {<br>\tcolor: red;<br>}<br>.bolds {<br>\tfont-weight: bold;<br>}<br>.italics {<br>\tfont-style: italic;<br>}<br>.unders {<br>\ttext-decoration: underline;<br>}';
+    // style.cssをこのサイト自体で改行なしに → Tab空白を\tに、<br>を\nに手動で直す
+    var copy_text = '.redst {\n\tcolor: red;\n\tfont-weight: bold;\n}\n.red {\n\tcolor: red;\n}\n.bolds {\n\tfont-weight: bold;\n}\n.italics {\n\tfont-style: italic;\n}\n.unders {\n\ttext-decoration: underline;\n}';
     navigator.clipboard.writeText(copy_text).then(() => {
       console.log("copied");
       console.log(copy_text);
