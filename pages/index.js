@@ -131,6 +131,14 @@ export default function Home() {
     func1(text_under,'unders');
   }, [text_under])
 
+  const [text_b_u,text_bu] = useState(undefined); // 下線
+  const toBU = (e) => {
+    text_bu(String(window.getSelection()));
+  };
+  useEffect(() => {
+    func1(text_b_u,'bu');
+  }, [text_b_u])
+
 
   // コピー
   const cp = () => {
@@ -189,6 +197,7 @@ export default function Home() {
             <button className={`${styles.edit_btn} bolds`} onClick={toBolds}>B</button>
             <button className={`${styles.edit_btn} italics`} onClick={toItalics}>I</button>
             <button className={`${styles.edit_btn} unders`} onClick={toUnders}>U</button>
+            <button className={`${styles.edit_btn} bu`} onClick={toBU}>B+U</button>
           </div>
           <div>
             <button className={styles.copy_btn} onClick={cp}>Copy</button>
